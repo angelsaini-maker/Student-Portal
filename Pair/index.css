@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+#Main-Div{
+    background-color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 50%;
+   align-items: center;
+
+}
+h1 { 
+    text-align: center;
+    color: rgb(77, 175, 140);
+font-style:italic;
+padding: 20px;
+}
+p {
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    background-color: rgb(153, 239, 236);
+    border: 1px solid black;
+    border-radius: 15px;
+
+
+   
+}
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px, solid rgb(189, 188, 188);
+}
+#name {
+    display: flex;
+    padding:30px;
+    margin:20px ;
+    
+    
+
+}
