@@ -1,120 +1,124 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-body{
-    background-color: rgb(226, 240, 246);
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.nav-bar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 15px 40px;
-    border-bottom: 2px solid rgb(200, 200, 200);
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+/* Body: footer ko hamesha neeche rakhta hai */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(226, 240, 246);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
 }
 
-nav ul{
-    display: flex;
-    gap: 30px;
-    list-style-type: none;
+/* Navbar */
+.nav-bar {
+  background-color: white;
+  margin: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.nav-bar a{
-    color: #2563eb;
-    font-size: 20px;
-    white-space: nowrap;
-    text-decoration: none;
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 25px;
 }
 
-.nav-bar a:hover{
-    color: #1e3a8a;
+.nav-bar a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding-bottom: 3px;
 }
 
-h1{
-    margin-top: 30px;
-    color: #1e3a8a;
-    font-size: 40px;
+.nav-bar a:hover {
+  color: #2563eb;
 }
 
-h2{
-    margin-top: 25px;
-    color: #2563eb;
-    font-size: 30px;
+.nav-bar a.active {
+  color: #2563eb;
+  font-weight: bold;
+  border-bottom: 2px solid #2563eb;
 }
 
-h3{
-    font-size: 24px;
+/* Header (blue banner) */
+header {
+  background-color: rgb(12, 12, 129);
+  color: white;
+  padding: 25px 20px;
 }
 
-h4{
-    margin-top: 20px;
-    color: #1e3a8a;
+h1 {
+  font-size: 36px;
+}
+3
+/* Main content */
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
 }
 
-p{
-    width: 80%;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border: 1px solid gray;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    font-size: 18px;
+/* White box (heading + content andar) */
+.box {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 17px;
 }
 
-body > ul{
-    width: 80%;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px 40px;
-    border: 1px solid gray;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    text-align: left;
+.box h2 {
+  color: #2563eb;
+  font-size: 24px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
 }
 
-body > ul li{
-    margin: 12px 0;
-    font-size: 18px;
+.box ul {
+  list-style: none;
 }
 
-footer{
-    width: 80%;
-    margin: 40px auto;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
+.box li {
+  margin: 6px 0;
 }
 
-footer h5{
-    font-size: 16px;
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
 }
 
-@media (max-width:768px){
+h5 {
+  font-size: 15px;
+}
 
-    nav ul{
-        flex-direction: column;
-    }
+/* Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
 
-    h1{
-        font-size: 30px;
-    }
+  .nav-bar ul {
+    gap: 10px 18px;
+  }
 
-    p,
-    body > ul{
-        width: 95%;
-    }
+  .box h2 {
+    font-size: 21px;
+  }
 }

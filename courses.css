@@ -1,143 +1,161 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(226, 240, 246);
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
+/* Body: footer ko hamesha neeche rakhta hai */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(226, 240, 246);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
 }
 
-.nav-bar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 15px 40px;
-    border-bottom: 2px solid rgb(200, 200, 200);
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+/* Navbar */
+.nav-bar {
+  background-color: white;
+  margin: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-nav ul{
-    display: flex;
-    gap: 30px;
-    list-style-type: none;
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 25px;
 }
 
-.nav-bar a{
-    color: #2563eb;
-    font-size: 20px;
-    text-decoration: none;
+.nav-bar a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding-bottom: 3px;
 }
 
-.nav-bar a:hover{
-    color: #1e3a8a;
+.nav-bar a:hover {
+  color: #2563eb;
 }
 
-h1{
-    margin-top: 30px;
-    color: #1e3a8a;
-    font-size: 40px;
+.nav-bar a.active {
+  color: #2563eb;
+  font-weight: bold;
+  border-bottom: 2px solid #2563eb;
 }
 
-h2{
-    margin-top: 30px;
-    color: #2563eb;
-    font-size: 30px;
+/* Header (blue banner) */
+header {
+  background-color: rgb(12, 12, 129);
+  color: white;
+  padding: 25px 20px;
 }
 
-h3{
-    margin-top: 20px;
-    color: #1e3a8a;
-    font-size: 24px;
+h1 {
+  font-size: 36px;
 }
 
-h4{
-    margin-top: 25px;
-    color: #1e3a8a;
+/* Main content */
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
 }
 
-p{
-    width: 80%;
-    margin: 15px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid gray;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    font-size: 18px;
+/* White box (heading + content andar) */
+.box {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 17px;
 }
 
-body > ul{
-    width: 80%;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px 40px;
-    border-radius: 12px;
-    border: 1px solid gray;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    text-align: left;
+.box h2 {
+  color: #2563eb;
+  font-size: 24px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
 }
 
-body > ul li{
-    margin: 10px 0;
-    font-size: 18px;
+/* Learning status list */
+.box ul {
+  list-style: disc;
+  text-align: left;
+  padding-left: 25px;
 }
 
-/* Mentor ke liye Flexbox Layout */
-.courses{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+.box li {
+  margin: 6px 0;
 }
 
-.courses h3{
+/* Course cards (bade box ke andar) */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 290px;
+  background-color: rgb(245, 250, 253);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.card h3 {
+  color: #1e3a8a;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Last line */
+.note {
+  color: #1e3a8a;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .nav-bar ul {
+    gap: 10px 18px;
+  }
+
+  .box h2 {
+    font-size: 21px;
+  }
+
+  .card {
     width: 100%;
-}
-
-.courses p{
-    width: 300px;
-    min-height: 180px;
-}
-
-footer{
-    width: 80%;
-    margin: 40px auto;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-}
-
-footer h5{
-    font-size: 16px;
-}
-
-@media (max-width:768px){
-
-    nav ul{
-        flex-direction: column;
-    }
-
-    .courses{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .courses p{
-        width: 90%;
-    }
-
-    h1{
-        font-size: 30px;
-    }
+  }
 }

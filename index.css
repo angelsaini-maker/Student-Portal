@@ -1,104 +1,112 @@
-*{
-  padding: 0px;
-  margin: 0px;
-  text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body{
+/* Body: footer ko hamesha neeche rakhta hai */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(226, 240, 246);
-  text-align: center;
-  padding: 0;
-  margin: 0;
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #333;
+  text-align: center;
 }
 
-.nav-bar{
-  justify-content: center;
-  align-items: center; 
-  display: flex;
-  border-bottom: 2px solid gray;
-  background-color: rgb(255, 255, 255);
-  padding: 20px 40px;
-  margin: 20px 40px;
+/* Navbar */
+.nav-bar {
+  background-color: white;
+  margin: 20px;
+  padding: 15px 20px;
   border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.nav-bar ul{
+.nav-bar ul {
+  list-style: none;
   display: flex;
-  list-style-type: none;
-  background-color: rgb(255, 255, 255);
-  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 25px;
 }
 
-.nav-bar a{
-  font-size: 15px;
-  text-decoration: none;
+.nav-bar a {
   color: black;
-}
-
-.nav-bar a:hover{
-  color: blue;
-}
-
-h1{
-  color: white;
-  font-size: 40px;
-}
-
-h2{
-  font-size: 30px;
-}
-
-h3{
-  font-size: 24px;
-}
-
-p{
+  text-decoration: none;
   font-size: 16px;
+  padding-bottom: 3px;
 }
 
-header{
+.nav-bar a:hover {
+  color: #2563eb;
+}
+
+.nav-bar a.active {
+  color: #2563eb;
+  font-weight: bold;
+  border-bottom: 2px solid #2563eb;
+}
+
+/* Header (blue banner) */
+header {
   background-color: rgb(12, 12, 129);
   color: white;
-  padding: 20px;
-  border: 1px solid gray;
+  padding: 25px 20px;
 }
 
-body > ul{
-  margin: 30px;
+h1 {
+  font-size: 36px;
+}
+
+/* Main content: baki jagah lekar footer ko neeche dhakel deta hai */
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+/* White box */
+.box {
   background-color: white;
-  padding: 35px;
-  border-radius: 7px;
-  border: 1px solid gray;
-  min-height: 150px;
-  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 17px;
 }
 
-footer{
-  margin-top: 200px;
+.box ul {
+  text-align: left;
+  padding-left: 25px;
+}
+
+.box li {
+  margin: 8px 0;
+}
+
+/* Footer */
+footer {
   background-color: #333;
   color: white;
   padding: 20px;
-  border-radius: 7px;
-  text-align: center;
-  border: 1px solid gray;
 }
 
-h5{
+h5 {
   font-size: 15px;
 }
 
-@media (max-width:768px){
-
-  .nav-bar ul{
-    flex-direction: column;
+/* Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
   }
 
-  h1{
-    font-size: 30px;
+  .nav-bar ul {
+    gap: 10px 18px;
   }
 }

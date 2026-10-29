@@ -1,57 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="feedback.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | Student Portal</title>
+  <link rel="stylesheet" href="feedback.css">
 </head>
+
 <body>
-     <div class="nav-bar">  
-     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="profile.html">Profile Page</a></li> 
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="grades.html">Grades</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+
+  <div class="nav-bar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile Page</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-    </div>
+  </div>
+
+  <header>
     <h1>Feedback Form</h1>
-    <p>We value your feedback and would love to hear your thoughts. Please fill out the form below and share your experience.
-     Your feedback helps us improve our website and provide a better user experience</p>
-     <title>Feedback Form</title>
-     <form method="post">
+  </header>
+
+  <main>
+
+    <div class="box">
+      <p>
+        We value your feedback and would love to hear your thoughts.
+        Please fill out the form below and share your experience.
+        Your feedback helps us improve our website and provide a better user experience.
+      </p>
+    </div>
+
+    <div class="box">
+      <form method="post">
+
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name" placeholder="Write your name here..." required>
-        <br>
+        <input type="text" id="name" name="name" placeholder="Write your name here..." required>
+
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder=" ex. abc@gmail.com" required>
-        <br>
-        <label for="gender"> Select yourGender:</label>
-        <select name="gender" id="gender" required>
-            <option value="Select "> select </option>
-                <option value="Male"> Male</option>
-                <option value="Female"> Female</option>
-             <option value="Other"> Other</option>
+        <input type="email" id="email" name="email" placeholder="ex. abc@gmail.com" required>
+
+        <label for="gender">Select your Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
         </select>
-            <h4> Which Page did you like the most? </h4>
-            <select name="select"> 
-            <option value="select">select</option>
-            <option value="home">Home</option>
-            <option value="Profile">Profile</option>
-            <option value="Courses">Courses</option>
-            <option value="Grades">Grades</option>  
-            <option value="Feedback">Feedback</option>
-            <option value="Contact">Contact</option>
-            </select>
-<h3>Suggestions</h3>
-<textarea id="suggestions" name="suggetions" rows="10"
-cols="60" placeholder="write your suggestions here..."></textarea>
-</form>
-<button type="Submit"> Submit</button>
-     <footer><h5> © 2026  Student    Portal   |   Created    by    Angel    Saini</h5></footer>
+
+        <label for="page">Which page did you like the most?</label>
+        <select id="page" name="page">
+          <option value="">Select</option>
+          <option value="Home">Home</option>
+          <option value="Profile">Profile</option>
+          <option value="Courses">Courses</option>
+          <option value="Grades">Grades</option>
+          <option value="Feedback">Feedback</option>
+          <option value="Contact">Contact</option>
+        </select>
+
+        <label for="suggestions">Suggestions:</label>
+        <textarea id="suggestions" name="suggestions" rows="6" placeholder="Write your suggestions here..."></textarea>
+
+        <button type="submit">Submit</button>
+
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <h5>© 2026 Student Portal | Created by Angel Saini</h5>
+  </footer>
+
 </body>
-</html>              
+</html>
